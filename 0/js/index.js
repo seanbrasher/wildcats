@@ -52,6 +52,7 @@ StarWars = (function() {
     this.start.show();
     this.cloned = this.animation.clone(true);
     this.animation.remove();
+    alert('just removed the animation');
     this.animation = this.cloned;
 
     // Start the animation on click
