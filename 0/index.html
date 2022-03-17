@@ -8,18 +8,203 @@
   
       <link rel="stylesheet" href="css/style.css">
 
+	
+	<style>
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font: 700 1em "News Cycle", sans-serif;
+  letter-spacing: .15em;
+  color: #ff6;
+  background: #000;
+  overflow: hidden;
+  margin: 0;
+}
+
+.starwars section {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 1;
+}
+.starwars .start {
+  font-size: 200%;
+  width: 14em;
+  margin: -4em 0 0 -7em;
+  text-align: center;
+  cursor: pointer;
+}
+.starwars .start span {
+  color: #4bd5ee;
+}
+.starwars .intro {
+  width: 15em;
+  margin: 0 0 0 -7.5em;
+  font-size: 200%;
+  font-weight: 400;
+  color: #4bd5ee;
+  opacity: 0;
+  -webkit-animation: intro 6s ease-out 1s;
+          animation: intro 6s ease-out 1s;
+}
+.starwars .logo {
+  opacity: 0;
+  -webkit-animation: logo 9s ease-out 9s;
+          animation: logo 9s ease-out 9s;
+}
+.starwars .logo svg {
+  width: inherit;
+}
+.starwars .titles {
+  width: 14.65em;
+  margin: 0 0 0 -7.325em;
+  top: auto;
+  bottom: 0;
+  height: 50em;
+  font-size: 350%;
+  text-align: justify;
+  overflow: hidden;
+  transform-origin: 50% 100%;
+  transform: perspective(300px) rotateX(25deg);
+}
+.starwars .titles > div {
+  position: absolute;
+  top: 100%;
+  -webkit-animation: titles 81s linear 13s;
+          animation: titles 81s linear 13s;
+}
+.starwars .titles > div > p {
+  margin: 1.35em 0 1.85em 0;
+  line-height: 1.35em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes logo {
+  0% {
+    width: 18em;
+    margin: -9em 0 0 -9em;
+    transform: scale(2.75);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    width: 18em;
+    margin: -9em 0 0 -9em;
+  }
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+    width: 18em;
+    margin: -9em 0 0 -9em;
+  }
+}
+@keyframes logo {
+  0% {
+    width: 18em;
+    margin: -9em 0 0 -9em;
+    transform: scale(2.75);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    width: 18em;
+    margin: -9em 0 0 -9em;
+  }
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+    width: 18em;
+    margin: -9em 0 0 -9em;
+  }
+}
+@-webkit-keyframes titles {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    top: 20%;
+    opacity: 0;
+  }
+}
+@keyframes titles {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    top: 20%;
+    opacity: 0;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+	
+	
   
 </head>
 
 <body>
-  <article class="starwars">
+  
+	<article class="starwars">
   <audio preload="auto">
-    <source src="assets/Star_Wars_original_opening_crawl_1977.ogg" type="audio/ogg" />
-    <source src="assets/Star_Wars_original_opening_crawl_1977.mp3" type="audio/mpeg" />
+    <source src="https://s.cdpn.io/1202/Star_Wars_original_opening_crawl_1977.ogg" type="audio/ogg" />
+    <source src="https://s.cdpn.io/1202/Star_Wars_original_opening_crawl_1977.mp3" type="audio/mpeg" />
   </audio>
   
   <section class="start">
-    <p>Click Here To Begin</p>
+    <p>
+      Click here to begin     
+    </p>
   </section>
    
   <div class="animation">
@@ -30,7 +215,7 @@
     
   <section class="titles">
     <div contenteditable="true" spellcheck="false">  
-	<center>
+      <center>
       <p>Episode 0</p>
       <p>ESCAPE FROM THE RIDDANCE</p>
       <p></p>
@@ -38,19 +223,10 @@
       <p>It is a dangerous time for the Rebellion. Imperial troops have defeated the Rebel fleet decisively at the BATTLE OF MAKO-TA, decimating the fleet and taking hundreds of prisoners.</p> 
       <p>Rebel commandos led by BACCAM GRAFIS attack the Imperial prison barge RIDDANCE to rescue the Rebel prisoners of war, while opportunistic criminals inside the barge plot their own escape....</p>       
       
-      </center><!--  -->
+      </center>  
       </div>
   </section>
-
-<!--   <section class="planet">
-    <IMG SRC="assets/planet.png" WIDTH="900" HEIGHT="900" BORDER="0" ALT="">
-  </section>
   
-  <section class="ship1">
-	<IMG SRC="assets/ship1.png" class="shipimage1" BORDER="0" ALT="">
-  </section> -->
-
-  <!-- the paths defined below here just draw the STAR WARS logo... -->
   <section class="logo">
 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="693.615px" height="419.375px" viewBox="0 0 693.615 419.375" enable-background="new 0 0 693.615 419.375"
@@ -144,9 +320,94 @@
   </section>
   </div>
 </article>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-   
-    <script src="js/index.js"></script>
+	
+	<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+      <script id="rendered-js" >
+/*
+ * Star Wars opening crawl from 1977
+ * 
+ * I freaking love Star Wars, but could not find
+ * a web version of the original opening crawl from 1977.
+ * So I created this one.
+ *
+ * I wrote an article where I explain how this works:
+ * http://timpietrusky.com/star-wars-opening-crawl-from-1977
+ * 
+ * Watch the Start Wars opening crawl on YouTube.
+ * https://www.youtube.com/watch?v=7jK-jZo6xjY
+ * 
+ * Stuff I used:
+ * - CSS (animation, transform)
+ * - HTML audio (the opening theme)
+ * - SVG (the Star Wars logo from wikimedia.org)
+ *   http://commons.wikimedia.org/wiki/File:Star_Wars_Logo.svg
+ * - JavaScript (to sync the animation/audio)
+ *
+ * Thanks to Craig Buckler for his amazing article 
+ * which helped me to create this remake of the Star Wars opening crawl. 
+ * http://www.sitepoint.com/css3-starwars-scrolling-text/ 
+ *
+ * Sound copyright by The Walt Disney Company.
+ * 
+ *
+ * 2013 by Tim Pietrusky
+ * timpietrusky.com
+ * 
+ */
+StarWars = function () {
+
+  /* 
+   * Constructor
+   */
+  function StarWars(args) {
+    // Context wrapper
+    this.el = $(args.el);
+
+    // Audio to play the opening crawl
+    this.audio = this.el.find('audio').get(0);
+
+    // Start the animation
+    this.start = this.el.find('.start');
+
+    // The animation wrapper
+    this.animation = this.el.find('.animation');
+
+    // Remove animation and shows the start screen
+    this.reset();
+
+    // Start the animation on click
+    this.start.bind('click', $.proxy(function () {
+      this.start.hide();
+      this.audio.play();
+      this.el.append(this.animation);
+    }, this));
+
+    // Reset the animation and shows the start screen
+    $(this.audio).bind('ended', $.proxy(function () {
+      this.audio.currentTime = 0;
+      this.reset();
+    }, this));
+  }
+
+  /*
+   * Resets the animation and shows the start screen.
+   */
+  StarWars.prototype.reset = function () {
+    this.start.show();
+    this.cloned = this.animation.clone(true);
+    this.animation.remove();
+    this.animation = this.cloned;
+  };
+
+  return StarWars;
+}();
+
+new StarWars({
+  el: '.starwars' });
+//# sourceURL=pen.js
+    </script>
 
 </body>
 </html>
