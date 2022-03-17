@@ -48,7 +48,11 @@ StarWars = (function() {
     this.animation = this.el.find('.animation');
     
     // Remove animation and shows the start screen
-    this.reset();
+    //this.reset();
+    this.start.show();
+    this.cloned = this.animation.clone(true);
+    this.animation.remove();
+    this.animation = this.cloned;
 
     // Start the animation on click
     this.start.bind('click', $.proxy(function() {
